@@ -1,0 +1,15 @@
+.text-reveal {
+    display: inline-block;
+}
+
+.text-reveal .char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px) rotateX(-40deg);
+    transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.text-reveal.revealed .char {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+}

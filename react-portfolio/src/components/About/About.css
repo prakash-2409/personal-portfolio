@@ -1,0 +1,169 @@
+/* About Section */
+.about-section {
+    padding: var(--space-2xl) 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Story */
+.about-story {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.story-paragraph {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.story-paragraph:first-child {
+    font-size: 1.15rem;
+    color: var(--text);
+}
+
+/* Info Cards Grid */
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(6, 182, 212, 0.2));
+}
+
+.education-icon {
+    color: var(--cyan);
+}
+
+.experience-icon {
+    color: var(--purple);
+}
+
+.trophy-icon {
+    color: #fbbf24;
+}
+
+.card-primary {
+    font-weight: 500;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.card-secondary {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.cgpa-badge {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.cgpa-value {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Experience List */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.exp-item {
+    padding-left: 12px;
+    border-left: 2px solid var(--purple);
+}
+
+.exp-role {
+    font-weight: 500;
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.exp-company {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.exp-period {
+    font-size: 0.8rem;
+    color: var(--text-subtle);
+    font-family: var(--font-mono);
+}
+
+/* Achievements */
+.achievements-card {
+    grid-column: span 2;
+}
+
+.achievements-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.achievements-list li {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 16px;
+    border-radius: 8px;
+    border-left: 3px solid var(--purple);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .achievements-card {
+        grid-column: span 1;
+    }
+
+    .achievements-list {
+        flex-direction: column;
+    }
+}

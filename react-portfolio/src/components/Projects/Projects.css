@@ -1,0 +1,117 @@
+/* Projects Section */
+.projects-section {
+    padding: var(--space-2xl) 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.project-wrapper {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+    animation-delay: var(--delay, 0s);
+}
+
+/* Project Card Styles */
+.project-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.project-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(6, 182, 212, 0.2));
+    border-radius: 12px;
+    color: var(--purple);
+}
+
+.project-github {
+    color: var(--text-subtle);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.project-github:hover {
+    color: var(--purple);
+    transform: scale(1.1);
+}
+
+.project-title {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .project-title {
+    color: var(--purple);
+}
+
+.project-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.project-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--purple);
+}
+
+.project-tech {
+    display: flex;
+    gap: 8px;
+}
+
+.project-tech span {
+    font-size: 0.75rem;
+    color: var(--text-subtle);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-family: var(--font-mono);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .project-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
